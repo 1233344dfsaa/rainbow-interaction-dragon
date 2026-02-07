@@ -1,0 +1,20 @@
+/*Author Esat Yücel Software*/
+body, html {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent; /* Burayı değiştirdik */
+    touch-action: none;
+}
+
+svg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: transparent; /* Gri rengi sildik, arka planın görünmesini sağladık */
+	cursor: pointer;
+	filter: sepia(20%);
+}
