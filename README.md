@@ -1,4 +1,4 @@
-# Interaction Dragon
+# Rainbow Interaction Dragon
 This is an interaction dragon that follows your mouse.
 
 ## How to Run
