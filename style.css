@@ -1,4 +1,4 @@
-/*Author Esat Yücel Software*/
+
 body, html {
     position: absolute;
     margin: 0;
@@ -17,4 +17,5 @@ svg {
 	background: transparent; /* Gri rengi sildik, arka planın görünmesini sağladık */
 	cursor: pointer;
 	filter: sepia(20%);
+
 }
