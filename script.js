@@ -1,4 +1,4 @@
-/*Author Esat Yücel Software*/
+
 
 "use strict";
 
@@ -79,22 +79,23 @@ const run = () => {
 
 run();
 window.addEventListener("pointerdown", () => {
-    // Rastgele bir renk oluşturur
-    const randomColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
-    
-    // Ejderhanın parçalarını bulur ve rengini değiştirir
+    // Ejderhanın tüm parçalarını (path) bulur
     const paths = document.querySelectorAll("path");
-    paths.forEach(path => {
-        path.style.fill = randomColor;
-    });
-});
-window.addEventListener("pointerdown", () => {
-    const r = Math.floor(Math.random() * 255);
-    const g = Math.floor(Math.random() * 255);
-    const b = Math.floor(Math.random() * 255);
-    const newColor = `rgb(${r}, ${g}, ${b})`;
     
-    // Hem body hem de html'in rengini değiştirelim
-    document.body.style.backgroundColor = newColor;
-    document.documentElement.style.backgroundColor = newColor;
+    // Her bir parça için ayrı, rastgele bir renk oluşturur
+    paths.forEach(path => {
+        const r = Math.random() * 255;
+        const g = Math.random() * 255;
+        const b = Math.random() * 255;
+        path.style.fill = `rgb(${r}, ${g}, ${b})`;
+    });
+
+    // Arka plan rengini de değiştirmeye devam edelim
+    const bgR = Math.floor(Math.random() * 255);
+    const bgG = Math.floor(Math.random() * 255);
+    const bgB = Math.floor(Math.random() * 255);
+    const newBgColor = `rgb(${bgR}, ${bgG}, ${bgB})`;
+    
+    document.body.style.backgroundColor = newBgColor;
+    document.documentElement.style.backgroundColor = newBgColor;
 });
